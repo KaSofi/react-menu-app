@@ -1,3 +1,10 @@
+Week meal Planner App
+
+![hooks](https://github.com/KaSofi/react-menu-app/assets/103929930/586330ef-3508-4930-99b2-1ae6dec51209)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,38 +1,143 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  body {
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1400px;
+}
+h1 {
+  background-color: rgb(46,125,50, 0.5);
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
+.IngredientsContainer {
+  background-color: rgb(46,125,50, 0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px;
+  max-width: 600px;
+}
+.MyListContainer {
+  max-width: 400px;
+}
+textarea, input {
+  outline: rgb(46,125,50);
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.title {
   color: white;
+  height: 600px;
+  overflow: auto;
+  max-width: 400px;
+}
+span {
+  color: rgb(27, 27, 26);
+  font-weight: bold;
+}
+h5 {
+  line-height: 0.1;
+  color:rgb(218, 214, 9);
+  margin: 10px ;
+}
+.TextBlock {
+margin-bottom: 20px;
+}
+.selected {
+  color: black;
+  border: 4px solid rgb(218, 214, 9);
+}
+.selected span {
+  color: rgb(218, 214, 9);
+}
+.default {
+  background-color: rgb(248, 241, 242, 0.5);
+  margin: 5px;
+}
+.day {
+  padding: 20px;
+  margin: 1px;
+}
+.deleteItemButton {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgb(46,125,50, 0.5);
+  margin: -1px;
+}
+.deleteItemButton button {
+  background-color: rgb(248, 241, 242, 0);
+  font-weight: bolder;
+  color: rgb(218, 214, 9);
+  border-radius: 5px;
+  margin: 3px 3px;
+  border: 1px solid  rgb(218, 214, 9);
+}
+.deleteItemButton button:hover {
+  background-color: rgb(248, 5, 5);
+  color: white;
+  cursor: pointer;
+  border: 1px solid red;
+}
+p {
+  background-color: rgb(46,125,50, 0.5);
+  color: white;
+  font-weight: bolder;
+  word-break:break-all;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+:root {
+  --scrollbarBg: rgba(2, 142, 74, 1);
+  --scrollbarThumb: rgba(255, 255, 255, 0.8);
+  --scrollbarWidth: 16px;
+  --scrollbarBorder: 3px solid var(--scrollbarBg);
+  --scrollbarBorderRadius: calc(var(--scrollbarWidth) / 2);
+}
+.title {
+  scrollbar-width: var(--scrollbarWidth);
+  scrollbar-color: var(--scrollbarThumb) var(--scrollbarBg);
+}
+.title::-webkit-scrollbar {
+  width: var(--scrollbarWidth);
+}
+.title::-webkit-scrollbar-track {
+  background: var(--scrollbarBg);
+  border-radius: var(--scrollbarBorderRadius);
+}
+.title::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbarThumb);
+  border-radius: var(--scrollbarBorderRadius);
+  border: var(--scrollbarBorder);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* this stuff below doesn't
+   affect scrollbar styling */
+
+.title {
+  overflow: auto;
+}
+input[type=text] {
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 100%;
 }
